@@ -62,8 +62,10 @@ class KeymazePort(object):
             raise AssertionError('Cannot open device "%s"' % portname)
         if not self._port.isOpen():
             raise AssertionError('Cannot open device "%s"' % portname)
-        self._port.setRTS(level=0)
-        self._port.setDTR(level=0)
+##        self._port.setRTS(level=0)
+##        self._port.setDTR(level=0)
+        self._port.setRTS()
+        self._port.setDTR()
         self._drain()
             
     def close(self):
