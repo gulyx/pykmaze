@@ -32,7 +32,7 @@ OPTIND=1
 while getopts c:p:o:h OPT
 do	case "$OPT" in
 # command
-	c)	echo "foo"; PYKMAZE="${OPTARG}";;
+	c)	PYKMAZE="${OPTARG}";;
 # device
 	p)	DEVICE="${OPTARG}";;
 # output dir
